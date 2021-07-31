@@ -72,7 +72,11 @@ void Led::setIsReverse(bool isReverse)
 
 int Led::getStatus()
 {
-    return digitalRead(ledPin);
+    if (isReverse){
+        return !digitalRead(ledPin);
+    } else {
+        return digitalRead(ledPin);
+    }
 }
 
 int Led::getLedPin()

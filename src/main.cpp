@@ -176,11 +176,11 @@ void sendStatus(unsigned int msg_id, String cmd)
 
   if (myLed.getStatus())
   {
-    msg["data"]["led"] = "off";
+    msg["data"]["led"] = "on";
   }
   else
   {
-    msg["data"]["led"] = "on";
+    msg["data"]["led"] = "off";
   }
 
   msg["wifi"]["ssid"] = WiFi.SSID();
